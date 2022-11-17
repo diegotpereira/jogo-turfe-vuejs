@@ -1,15 +1,17 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Cabecalho />
+  <VisualizacaoCorrida />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Cabecalho from './components/cabecalho/Cabecalho.vue'
+import VisualizacaoCorrida from './visualizacoes/VisualizacaoCorrida.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Cabecalho,
+    VisualizacaoCorrida
   }
 }
 </script>
