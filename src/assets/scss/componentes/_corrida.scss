@@ -1,0 +1,17 @@
+.corrida {
+    @extend .container, .flex, .border-radius, .gap-16;
+    border: 2px solid $morromEscuro;
+    padding: 35px;
+    justify-content: center;
+    align-items: center;
+
+    @include breakpoints-down(medium) {
+        flex-direction: column;
+    }
+
+    &__pista {
+        @extend .flex, .flex-column, .justify-center, .width-full {
+            background-color: $verdeEscuro;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+/* variaveis */
+.container, .corrida {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.flex, .corrida {
+  display: flex;
+}
+
+.gap-16, .corrida {
+  gap: 16px;
+}
+
+.border-radius, .corrida {
+  border-radius: 8px;
+}
+
+.corrida {
+  border: 2px solid a67b5c;
+  padding: 35px;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=index.css.map */
