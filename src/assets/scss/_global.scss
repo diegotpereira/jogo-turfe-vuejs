@@ -15,6 +15,23 @@
     justify-content: center;
 }
 
+.items-center {
+    align-items: center;
+}
 .gap-16 {
     gap: 16px;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+/* Posição */
+
+.relativo {
+    position: relative;
+}
+
+.height-auto {
+    height: auto;
 }

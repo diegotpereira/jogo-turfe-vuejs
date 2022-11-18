@@ -1,0 +1,10 @@
+.contagem-regressiva {
+    color: $marromEscuro;
+    &__numero {
+        @extend .border-radius;
+        border: 2px solid $marromEscuro;
+        padding: 0 10px;
+        background-color: $marromBranco;
+        margin-bottom: 5px;
+    }
+}

@@ -1,6 +1,6 @@
 .corrida {
     @extend .container, .flex, .border-radius, .gap-16;
-    border: 2px solid $morromEscuro;
+    border: 2px solid $marromEscuro;
     padding: 35px;
     justify-content: center;
     align-items: center;
@@ -12,5 +12,53 @@
     &__pista {
         @extend .flex, .flex-column, .justify-center, .width-full;
         background-color: $verdeEscuro;
+    }
+
+
+    &__largada {
+        @extend .flex;
+        padding-right: 75px;
+        padding-left: 30px;
+
+        &:first-child {
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        &:last-child {
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+
+        &--escuro {
+            background-color: $brancoVerde;
+        }
+
+        &--claro{
+            background-color: $claroVerde;
+        }
+
+    }
+
+    &__ponto {
+        @extend .inline-block;
+        border-left: 3px solid $marromClaro;
+
+        &--final{
+            margin-left: auto;
+        }
+    }
+
+    &__cavalo {
+        @extend .inline-block, .relativo, .height-auto;
+        width: 60px;
+        margin: 5px 0;
+    }
+
+    &__largada-nome {
+        @extend .flex, .justify-center, .items-center, .width-full, .relativo;
+        color: $marromClaro;
+        opacity: 0.5;
+        overflow-wrap: anywhere;
     }
 }

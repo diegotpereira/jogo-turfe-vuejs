@@ -1,7 +1,8 @@
 <template>
     <div class="corrida">
-        <PistaCorrida />
-        <p>corrida</p>
+        <PistaCorrida>
+            
+        </PistaCorrida>
     </div>
 </template>
 <script>

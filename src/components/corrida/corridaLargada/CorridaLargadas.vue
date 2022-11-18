@@ -2,7 +2,7 @@
     <div class="corrida__largadas">
         <div 
             class="corrida__largada"
-            :class="[(cavalo.id % 2) ? 'corrida__largada--escuro' : 'corrida__largada--luz']"
+            :class="[(cavalo.id % 2) ? 'corrida__largada--escuro' : 'corrida__largada--claro']"
             v-for="cavalo in corridaLoja.cavalos" :key="cavalo.id">
             <CorridaLargada :cavalo="cavalo"></CorridaLargada>
         </div>

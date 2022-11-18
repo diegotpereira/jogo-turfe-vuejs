@@ -1,24 +1,94 @@
+@charset "UTF-8";
 /* variaveis */
 .container, .corrida {
   max-width: 1280px;
   margin: 0 auto;
 }
 
-.flex, .corrida {
+.flex, .corrida__largada-nome, .corrida__largada, .corrida__pista, .corrida {
   display: flex;
+}
+
+.flex-column, .corrida__pista {
+  flex-direction: column;
+}
+
+.justify-center, .corrida__largada-nome, .corrida__pista {
+  justify-content: center;
+}
+
+.items-center, .corrida__largada-nome {
+  align-items: center;
 }
 
 .gap-16, .corrida {
   gap: 16px;
 }
 
-.border-radius, .corrida {
+.inline-block, .corrida__cavalo {
+  display: inline-block;
+}
+
+/* Posição */
+.relativo, .corrida__largada-nome, .corrida__cavalo {
+  position: relative;
+}
+
+.height-auto, .corrida__cavalo {
+  height: auto;
+}
+
+.border-radius, .contagem-regressiva__numero, .corrida {
   border-radius: 8px;
 }
 
+.width-full, .corrida__largada-nome, .corrida__pista {
+  width: 100%;
+}
+
 .corrida {
-  border: 2px solid a67b5c;
+  border: 2px solid #a67b5c;
   padding: 35px;
   justify-content: center;
   align-items: center;
+}
+.corrida__pista {
+  background-color: #104730;
+}
+.corrida__cavalo {
+  width: 60px;
+  margin: 5px 0;
+}
+.corrida__largada {
+  padding-right: 75px;
+  padding-left: 30px;
+}
+.corrida__largada:first-child {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.corrida__largada:last-child {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.corrida__largada--escuro {
+  background-color: #417154;
+}
+.corrida__largada--claro {
+  background-color: #3a644b;
+}
+.corrida__largada-nome {
+  color: #c8b282;
+  opacity: 0.5;
+  overflow-wrap: anywhere;
+}
+
+.contagem-regressiva {
+  color: #a67b5c;
+}
+.contagem-regressiva__numero {
+  border: 2px solid #a67b5c;
+  padding: 0 10px;
+  background-color: #d0c59a;
+  margin-bottom: 5px;
 }/*# sourceMappingURL=index.css.map */

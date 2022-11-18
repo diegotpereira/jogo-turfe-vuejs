@@ -1,9 +1,9 @@
 <template>
     <div 
-        class="relativa"
+        class="relativo"
         :style="`left: ${props.cavalo.posicaoLargada}%`">
-        <img src="@/assets/imagens/horse.gif" class="corrida_cavalo" v-if="props.cavalo.correndo" />
-        <img src="@/assets/imagens/horse-stop.gif" class="corrida_cavalo" v-if="!props.cavalo.correndo" />
+        <img src="@/assets/imagens/horse.gif" class="corrida__cavalo" v-if="props.cavalo.correndo" />
+        <img src="@/assets/imagens/horse-stop.gif" class="corrida__cavalo" v-if="!props.cavalo.correndo" />
     </div>
 </template>
 <script setup>
