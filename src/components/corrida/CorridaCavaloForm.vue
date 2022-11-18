@@ -6,18 +6,18 @@
                 <EntradaTexto v-model:nome="cavalo.nome"></EntradaTexto>
             </li>
         </ol>
-        <div class="corrida__invalida">
+        <div class="corrida__invalida" v-if="nomeCavaloVazio">
             * Os cavalos devem ter um nome.
         </div>
         <div class="corrida__botoes">
-            <Botao class="corrida__botao" title="Iniciar" @click="iniciar"></Botao>
+            <Botao class="corrida__botao" title="Iniciar" @click="iniciar" :btnDesabilitar="nomeCavaloVazio || corridaLoja.ehCorrida"></Botao>
         </div>
     </div>
 </template>
 <script setup>
 import { useCorridaLoja } from '@/stores/corridaLoja'
 import EntradaTexto from '../entrada/EntradaTexto.vue'
-import { defineEmits } from 'vue'
+import { computed, defineEmits } from 'vue'
 import Botao  from '../Botao.vue'
 
 const corridaLoja = useCorridaLoja();
@@ -27,4 +27,9 @@ function iniciar() {
     window.scrollTo({ top: 0 })
     emits("iniciar")
 }
+
+const nomeCavaloVazio = computed(() => {
+
+    return corridaLoja.cavalos.some((cavalo) => cavalo.nome === "");
+})
 </script>
