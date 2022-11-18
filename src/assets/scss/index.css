@@ -30,7 +30,7 @@
 }
 
 /* Posição */
-.relativo, .corrida__largada-nome, .corrida__cavalo {
+.relative, .corrida__largada-nome, .corrida__cavalo {
   position: relative;
 }
 

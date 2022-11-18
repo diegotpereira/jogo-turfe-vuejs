@@ -1,0 +1,26 @@
+.cabecalho {
+    @extend .flex, .justify-center;
+    margin-top: 16px;
+
+    @include breakpoint-up(medium) {
+        margin-top: 64px;
+    }
+
+    &__texto {
+        border: 3px solid $marromEscuro;
+        color: $claroVerde;
+        background-color: $marromClaro;
+        font-size: 32px;
+        font-weight: 700;
+        padding: 12px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        text-shadow: 4px 4px $marromBranco;
+
+        @include breakpoint-up(medium) {
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50%;
+            padding: 24px;
+        }
+    }
+}

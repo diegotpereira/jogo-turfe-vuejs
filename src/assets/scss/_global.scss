@@ -1,3 +1,16 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Patrick Hand', cursive;
+}
+
+body {
+    background-color: $verdeEscuro;
+}
+
 .container {
     max-width: 1280px;
     margin: 0 auto;
@@ -39,13 +52,17 @@
     gap: 16px;
 }
 
+.block {
+    display: block;
+}
+
 .inline-block {
     display: inline-block;
 }
 
 /* Posição */
 
-.relativo {
+.relative {
     position: relative;
 }
 
@@ -59,4 +76,24 @@
 
 .height-auto {
     height: auto;
+}
+
+.width-auto {
+    width: auto;
+}
+
+input {
+    @extend .border-radius, .outline-0;
+    background-color: $marromClaro;
+    padding: 5px 10px;
+    color: $verdeEscuro;
+    border: 2px solid transparent;
+
+    &::placeholder {
+        color: $verdeEscuro;
+    }
+
+    &:focus {
+        border: 2px solid $marromEscuro;
+    }
 }

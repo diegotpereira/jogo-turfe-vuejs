@@ -2,7 +2,7 @@
     <div class="corrida__classificacaoquadro">
         <h2 class="corrida__titulo">Quadro Classificação</h2>
         <ol class="corrida__lista">
-            <li class="corrida__lista-item corrida_lista-item--finalizada" v-for="cavalo in finalizado" :key="cavalo.id">
+            <li class="corrida__lista-item corrida_lista-item--finalizado" v-for="cavalo in finalizado" :key="cavalo.id">
 
             </li>
             <li class="corrida__lista-item" v-for="cavalo in classificacaoQuadro" :key="cavalo.id">

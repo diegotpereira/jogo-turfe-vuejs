@@ -1,6 +1,6 @@
 <template>
     <div class="contagem-regressiva">
-        <div class="contagen-regressiva__numero">{{ props.contarNumero }}</div>
+        <div class="contagem-regressiva__numero">{{ props.contarNumero }}</div>
     </div>
 </template>
 <script setup>

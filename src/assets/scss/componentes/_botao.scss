@@ -1,0 +1,24 @@
+button,
+.botao {
+    @extend .border-radius;
+    cursor: pointer;
+    background-color: $marromClaro;
+    color: $verdeEscuro;
+    padding: 5px 10px;
+    border: 2px solid $marromEscuro;
+    font-size: 16px;
+
+    &:hover {
+        background-color: $marromEscuro;
+        color: $marromClaro;
+        border: 2px solid $marromBranco;
+    }
+
+    &:disabled {
+        cursor: context-menu;
+        opacity: 0.5;
+        background-color: $marromEscuro;
+        border: 2px solid $marromEscuro;
+        color: $marromBranco;
+    }
+}

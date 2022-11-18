@@ -1,6 +1,6 @@
 <template>
     <div 
-        class="relativo"
+        class="relative"
         :style="`left: ${props.cavalo.posicaoLargada}%`">
         <img src="@/assets/imagens/horse.gif" class="corrida__cavalo" v-if="props.cavalo.correndo" />
         <img src="@/assets/imagens/horse-stop.gif" class="corrida__cavalo" v-if="!props.cavalo.correndo" />

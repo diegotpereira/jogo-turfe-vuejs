@@ -44,9 +44,25 @@
         border: 2px solid $marromEscuro;
         width: 30%;
         color: $claroVerde;
+
+        @include breakpoint-down(medium) {
+            width: 100%;
+        }
+    }
+
+    &__invalida {
+        @extend .flex, .justify-center, .items-center;
+    }
+
+    &__classificacaoQuadro {
+        @extend .flex, .flex-column, .gap-16, .items-stretch;
     }
 
     &_cavalo-nome {
+        @extend .flex, .flex-column, .gap-16, .items-stretch;
+    }
+
+    &__resultado {
         @extend .flex, .flex-column, .gap-16, .items-stretch;
     }
 
@@ -64,6 +80,11 @@
         background-color: $marromBranco;
         padding: 3px;
         list-style-position: inside;
+
+        &--finalizado {
+            background-color: $verdeEscuro;
+            color: $marromBranco;
+        }
     }
     
     &__largada {
@@ -101,13 +122,13 @@
     }
 
     &__cavalo {
-        @extend .inline-block, .relativo, .height-auto;
+        @extend .inline-block, .relative, .height-auto;
         width: 60px;
         margin: 5px 0;
     }
 
     &__largada-nome {
-        @extend .flex, .justify-center, .items-center, .width-full, .relativo;
+        @extend .flex, .justify-center, .items-center, .width-full, .relative;
         color: $marromClaro;
         opacity: 0.5;
         overflow-wrap: anywhere;

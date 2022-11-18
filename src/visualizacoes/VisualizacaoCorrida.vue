@@ -15,7 +15,7 @@ import { useCorridaLoja } from "@/stores/corridaLoja"
 
 const corridaInterface = ref({
     form: true,
-    liderCorrida: false,
+    classificacaoQuadro: false,
     resultado: false
 })
 
@@ -25,7 +25,7 @@ const corridaLoja = useCorridaLoja();
 // corrida terminada
 watch(() => corridaLoja.ehCorrida, () => {
     if(corridaLoja.ehCorrida === false) {
-        corridaInterface.value.liderCorrida = false;
+        corridaInterface.value.classificacaoQuadro = false;
         corridaInterface.value.resultado = true;
     }
 })
@@ -38,7 +38,7 @@ function iniciar() {
     corridaLoja.ehCorrida = true;
     setTimeout(() => {
         corridaInterface.value.form = false;
-        corridaInterface.value.liderCorrida = true;
+        corridaInterface.value.classificacaoQuadro = true;
         corridaLoja.cavalosCorrendo()
         corridaLoja.cavalos.forEach((cavalo) => {
             corridaLoja.corridaCavalo(cavalo.id)
