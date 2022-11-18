@@ -1,6 +1,6 @@
 <template>
     <div class="corrida">
-        <PistaCorrida :contar="contar">
+        <PistaCorrida :contar="contar" @contadorManipuladores="contadorManipuladores">
             
         </PistaCorrida>
         <CorridaInterface :corridaInterface="corridaInterface" @iniciar="iniciar"></CorridaInterface>
@@ -28,6 +28,10 @@ watch(() => corridaLoja.ehCorrida, () => {
         corridaInterface.value.resultado = true;
     }
 })
+
+function contadorManipuladores(value) {
+    contar.value = value
+}
 
 function iniciar() {
     corridaLoja.ehCorrida = true;

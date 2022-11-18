@@ -69,7 +69,11 @@ export const useCorridaLoja = defineStore('CorridaLoja', {
         }
     },
     getters: {
-
+        corridaFinalizada: (state) => {
+            if(state.numeroDeCavalos === (state.cavalos.length + 1)) {
+                state.ehCorrida = false;
+            }
+        }
     },
     actions: {
 
