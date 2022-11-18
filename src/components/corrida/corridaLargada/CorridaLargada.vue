@@ -5,9 +5,10 @@
     <div class="corrida__ponto corrida__ponto--final"></div>
 </template>
 <script setup>
-import CorridaCavalo from '../CorridaCavalo.vue'
+import CorridaCavalo from '../CorridaCavalo.vue';
+import { defineProps } from 'vue' ;
 
-const props = define({
+const props = defineProps({
     cavalo: {
         type: Object,
         required: true

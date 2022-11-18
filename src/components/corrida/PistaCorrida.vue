@@ -12,6 +12,7 @@
 import { useCorridaLoja } from '@/stores/corridaLoja'
 import { onBeforeMount, ref, watch, defineProps, defineEmits} from 'vue'
 import ContagemRegressiva from '../ContagemRegressiva.vue'
+import CorridaLargadas from './corridaLargada/CorridaLargadas.vue'
 
 const corridaLoja = useCorridaLoja();
 const props = defineProps({

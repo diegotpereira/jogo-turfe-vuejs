@@ -11,9 +11,9 @@ const props = defineProps({
         type: Number,
         required: true
     }
-});
+})
 
-const emits = defineEmits(['update: contarNumero']);
+const emits = defineEmits(['update: contarNumero'])
 let contagemregressiva = null;
 
 onMounted(() => {

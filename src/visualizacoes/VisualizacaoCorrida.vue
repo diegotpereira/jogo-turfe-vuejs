@@ -3,7 +3,7 @@
         <PistaCorrida :contar="contar" @contadorManipuladores="contadorManipuladores">
             
         </PistaCorrida>
-        <CorridaInterface :corridaInterface="corridaInterface" @iniciar="iniciar"></CorridaInterface>
+        <CorridaInterface :corridaInterface="corridaInterface" @iniciar="iniciar" @reiniciar="reiniciar"></CorridaInterface>
     </div>
 </template>
 <script setup>
@@ -11,6 +11,7 @@ import PistaCorrida from '../components/corrida/PistaCorrida.vue'
 import CorridaInterface from '../components/corrida/CorridaInterface.vue'
 import { ref, watch } from 'vue'
 import { useCorridaLoja } from "@/stores/corridaLoja"
+
 
 const corridaInterface = ref({
     form: true,
@@ -43,5 +44,16 @@ function iniciar() {
             corridaLoja.corridaCavalo(cavalo.id)
         })
     }, 3000)
+}
+
+function reiniciar() {
+    corridaInterface.value.resultado = false;
+    corridaInterface.value.form = true;
+    corridaLoja.cavalos.map((cavalo) => {
+        cavalo.posicaoLargada = 0;
+        cavalo.numeroDe = null
+    })
+
+    contar.value = 3;
 }
 </script>
