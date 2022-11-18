@@ -3,6 +3,7 @@
         <div 
             class="corrida__contagem-regressiva"
             v-if="corridaLoja.ehCorrida && contarNumero > 0">
+            <ContagemRegressiva />
         </div>
         <CorridaLargadas></CorridaLargadas>
     </div>
@@ -10,6 +11,7 @@
 <script setup>
 import { useCorridaLoja } from '@/stores/corridaLoja'
 import { ref } from 'vue'
+import ContagemRegressiva from '../ContagemRegressiva.vue'
 
 const corridaLoja = useCorridaLoja();
 const contarNumero = ref()

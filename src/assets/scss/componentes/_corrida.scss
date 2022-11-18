@@ -14,7 +14,53 @@
         background-color: $verdeEscuro;
     }
 
+    &__botoes {
+        @extend .flex, .gap-2;
+    }
 
+    &__contagem-regressiva {
+        @extend .absolute,
+                .border-radius,
+                .self-center,
+                .flex,
+                .items-end,
+                .justify-center;
+        background-image: url('@/assets/imagens/start.gif');
+        background-size: cover;
+        width: 200px;
+        height: 200px;
+        z-index: 25;
+        border: 2px solid $marromEscuro;
+    }
+
+    &__interface {
+        @extend .flex, .flex-column, .border-radius, .gap-16;
+        padding: 10px;
+        background-color: $marromClaro;
+        border: 2px solid $marromEscuro;
+        width: 30%;
+        color: $claroVerde;
+    }
+
+    &_cavalo-nome {
+        @extend .flex, .flex-column, .gap-16, .items-stretch;
+    }
+
+    &__lista {
+        @extend .flex, .flex-column, .text-center, .gap-2;
+    }
+
+    &__titulo {
+        @extend .flex, .flex-column, .text-center, .gap-2;
+    }
+
+    &__lista-item {
+        @extend .border-radius, .width-full;
+        background-color: $marromBranco;
+        padding: 3px;
+        list-style-position: inside;
+    }
+    
     &__largada {
         @extend .flex;
         padding-right: 75px;

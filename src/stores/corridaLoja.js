@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia';
+import { numeroAleatorio } from '@/utils/numeroAleatorio';
 
 export const useCorridaLoja = defineStore('CorridaLoja', {
     
@@ -72,5 +73,30 @@ export const useCorridaLoja = defineStore('CorridaLoja', {
     },
     actions: {
 
+        async corridaCavalo(cavaloId) {
+            const encontrarIndiceCavalo = this.cavalos.findIndex((cavalo) => cavalo.id === cavaloId);
+            const correndo = setInterval(() => {
+                const aleatorio = numeroAleatorio(0.01, 1.00)
+                this.cavalos[encontrarIndiceCavalo].posicaoLargada += aleatorio;
+
+                if(this.cavalos[encontrarIndiceCavalo].posicaoLargada > 100) {
+                    this.cavalos[encontrarIndiceCavalo].posicaoLargada = 100;
+                    this.cavalos[encontrarIndiceCavalo].correndo = false;
+                    this.cavalos[encontrarIndiceCavalo].numeroDe = this.numeroDeCavalos;
+
+                    if(this.numeroDeCavalos < this.cavalos.length) {
+                        this.numeroDeCavalos++;
+
+                    } else {
+                        this.numeroDeCavalos = 1;
+                        this.ehCorrida = false;
+                    }
+                    clearInterval(correndo);
+                }
+            }, 50);
+        },
+        cavalosCorrendo() {
+            this.cavalos.map((cavalo) => cavalo.correndo = true)
+        }
     }
 });

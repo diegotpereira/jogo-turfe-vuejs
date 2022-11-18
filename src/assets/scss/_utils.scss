@@ -5,3 +5,9 @@
 .width-full {
     width: 100%;
 }
+
+.largada-marca {
+    &::marker {
+        content: 'Largada ' counter(lista-item) ': ';
+    }
+}

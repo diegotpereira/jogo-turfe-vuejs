@@ -14,11 +14,4 @@ import { useCorridaLoja } from '@/stores/corridaLoja'
 
 const corridaLoja = useCorridaLoja();
 
-// export default {
-//     name: 'paginaCorridaLargadas',
-//     components: {
-//         CorridaLargada
-//     }
-
-// }
 </script>

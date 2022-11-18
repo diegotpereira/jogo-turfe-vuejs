@@ -1,17 +1,43 @@
 <template>
     <div class="corrida">
-        <PistaCorrida>
+        <PistaCorrida :contar="contar">
             
         </PistaCorrida>
+        <CorridaInterface :corridaInterface="corridaInterface" @iniciar="iniciar"></CorridaInterface>
     </div>
 </template>
-<script>
+<script setup>
 import PistaCorrida from '../components/corrida/PistaCorrida.vue'
+import CorridaInterface from '../components/corrida/CorridaInterface.vue'
+import { ref, watch } from 'vue'
+import { useCorridaLoja } from "@/stores/corridaLoja"
 
-export default {
-    name: 'paginaCorrida',
-    components: {
-        PistaCorrida
+const corridaInterface = ref({
+    form: true,
+    liderCorrida: false,
+    resultado: false
+})
+
+const contar = ref(3);
+const corridaLoja = useCorridaLoja();
+
+// corrida terminada
+watch(() => corridaLoja.ehCorrida, () => {
+    if(corridaLoja.ehCorrida === false) {
+        corridaInterface.value.liderCorrida = false;
+        corridaInterface.value.resultado = true;
     }
+})
+
+function iniciar() {
+    corridaLoja.ehCorrida = true;
+    setTimeout(() => {
+        corridaInterface.value.form = false;
+        corridaInterface.value.liderCorrida = true;
+        corridaLoja.cavalosCorrendo()
+        corridaLoja.cavalos.forEach((cavalo) => {
+            corridaLoja.corridaCavalo(cavalo.id)
+        })
+    }, 3000)
 }
 </script>

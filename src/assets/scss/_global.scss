@@ -18,6 +18,23 @@
 .items-center {
     align-items: center;
 }
+
+.items-end {
+    align-items: flex-end;
+}
+
+.items-stretch {
+    align-items: stretch;
+}
+
+.self-center {
+    align-self: center;
+}
+
+.gap-2 {
+    gap: 2px;
+}
+
 .gap-16 {
     gap: 16px;
 }
@@ -30,6 +47,14 @@
 
 .relativo {
     position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.text-center {
+    text-align: center;
 }
 
 .height-auto {
